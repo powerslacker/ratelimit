@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"time"
 
-	"go.uber.org/ratelimit"
+	"github.com/powerslacker/ratelimit"
 )
 
 func main() {

@@ -138,3 +138,9 @@ func NewUnlimited() Limiter {
 func (unlimited) Take() time.Time {
 	return time.Now()
 }
+
+func WithCustomDuration(amount int, duration time.Duration) Option {
+	return func(l *limiter) {
+		l.perRequest = duration / time.Duration(amount)
+	}
+}
